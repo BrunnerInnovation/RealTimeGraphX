@@ -118,7 +118,7 @@ namespace RealTimeGraphX.DataPoints
                 return dMin.Ticks;
             }
 
-            var result = ((Value.Ticks - dMin.Ticks) * 100) / (dMax.Ticks - dMin.Ticks);
+            var result = ((Value.Ticks - dMin.Ticks) * 100) / (double)(dMax.Ticks - dMin.Ticks);
 
             return double.IsNaN(result) ? dMin.Ticks : result;
         }
